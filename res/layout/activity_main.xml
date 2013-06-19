@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:background="@drawable/gradient"
+    android:layout_height="fill_parent" >       
+
+    <TextView
+        android:id="@+id/usernameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_alignParentLeft="true"
+                android:text="username"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Logout" />
+
+
+        
+        <Spinner
+                android:id="@+id/spatial"
+                android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:ems="7"
+                android:layout_below="@+id/logoutButton"
+                android:layout_centerHorizontal="true"
+                android:prompt="@string/assetSpinnerPrompt" />
+        
+        <Button
+                android:id="@+id/tagButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="20dp"
+                android:layout_below="@+id/cameraButton"
+                android:layout_alignParentLeft="@+id/buttons_helper"
+                android:text="@string/tagLocationButtonText" />
+        
+        <EditText
+            android:id="@+id/DistanceField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/tagButton"
+            android:layout_alignParentLeft="true"
+            android:ems="2"
+            android:inputType="number" />
+                
+        <Spinner
+            android:id="@+id/distanceSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/DistanceField"
+            android:layout_alignRight="@+id/tagButton"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/DistanceField"
+            android:ems="4" />
+        
+        <View
+                 android:id="@+id/buttons_helper"
+                 android:layout_width="0dp"
+                 android:layout_height="0dp"
+                 android:layout_centerHorizontal="true" />
+        
+    <Button
+        android:id="@+id/clearFieldsButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/buttons_helper"
+        android:text="Clear" />
+
+    <Button
+                android:id="@+id/uploadAssetButton"
+                android:layout_margin="2dp"
+                android:padding="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/buttons_helper"
+                android:text="@string/uploadAssetButtonText" />
+
+    <TextView
+        android:id="@+id/lattitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tagButton"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/buttons_helper"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/DistanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/distanceSpinner"
+        android:layout_alignBottom="@+id/checkBox1"
+        android:layout_margin="1dp"
+        android:text="Use DistAdj:"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/distanceLabel"
+        android:layout_below="@+id/lattitude"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp" />
+
+    <EditText
+        android:id="@+id/serialTextField"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spatial"
+        android:layout_margin="2dp"
+        android:layout_toLeftOf="@+id/checkBox1"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="Serial"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/cameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/serialTextField"
+        android:layout_alignParentLeft="true"
+        android:paddingRight="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="10dp"
+        android:text="@string/cameraButtonText" />
+
+    <TextView
+        android:id="@+id/numImagesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/serialTextField"
+        android:layout_toRightOf="@+id/cameraButton"
+        android:text="Imgs: 0" />
+
+    <Button
+        android:id="@+id/notesButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/serialTextField"
+        android:layout_alignParentRight="true"
+        android:text="Notes" />
+
+    <Button
+        android:id="@+id/syncSaveButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/clearFieldsButton"
+        android:layout_alignParentRight="true"
+        android:text="@string/offlineStorage" />
+
+</RelativeLayout> 
